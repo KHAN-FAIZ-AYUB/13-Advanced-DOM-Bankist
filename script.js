@@ -130,8 +130,7 @@ logo.classList.contains('c'); //not includes
 logo.className = 'Khan';
 */
 
-///////////////////////////////////////
-// Types of Events and Event Handlers
+// Implementing smooth scrolling
 
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
@@ -167,3 +166,19 @@ btnScrollTo.addEventListener('click', function (e) {
 
   console.log(section1.scrollIntoView({ behavior: 'smooth' }));
 });
+
+///////////////////////////////////////
+// Types of Events and Event Handlers
+
+const h1 = document.querySelector('h1');
+
+const alertH1 = function () {
+  alert('addEventListner: Great! you are reading the heading');
+};
+h1.addEventListener('mouseenter', alertH1);
+
+setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+
+// h1.onmouseenter = function (e) {
+//   alert('onmouseenter: Great! you are reading the heading');
+// };
