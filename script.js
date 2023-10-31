@@ -34,16 +34,16 @@ document.addEventListener('keydown', function (e) {
 ///////////////////////////////////////
 ///////////////////////////////////////
 
-// /*
+/*
 ///////////////////////////////////////
 // Selecting, Creating, and Deleting Elements
 
 // Selecting elements
-/*
+
 console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
-*/
+
 
 const header = document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
@@ -76,7 +76,9 @@ document
     // message.remove();
     message.parentElement.removeChild(message);
   });
+/*
 
+/*
 ///////////////////////////////////////
 // Styles, Attributes and Classes
 
@@ -126,3 +128,42 @@ logo.classList.contains('c'); //not includes
 
 // Don't use
 logo.className = 'Khan';
+*/
+
+///////////////////////////////////////
+// Types of Events and Event Handlers
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scrool (X/Y)', window.pageXOffset, pageYOffset);
+
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  //  Scrolling
+
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+  // console.log(s1coords.left+window.pageXOffset,s1coords.top + window.pageYOffset);
+  // });
+
+  console.log(section1.scrollIntoView({ behavior: 'smooth' }));
+});
