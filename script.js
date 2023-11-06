@@ -93,6 +93,12 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 });
 
 ///////////////////////////////////////
+// Tabbed component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+///////////////////////////////////////
 ///////////////////////////////////////
 ///////////////////////////////////////
 
@@ -240,6 +246,7 @@ document.querySelector('.nav').addEventListener('click', function (e) {
 });
 */
 
+/*
 ///////////////////////////////////////
 // DOM Traversing
 
@@ -270,3 +277,4 @@ console.log(h1.parentElement.children);
 [...h1.parentElement.children].forEach(function (el) {
   if (el !== h1) el.style.transform = 'scale(0.5)';
 });
+*/
